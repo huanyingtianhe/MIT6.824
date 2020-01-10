@@ -28,9 +28,17 @@ type registerReply struct {
 	ok bool
 }
 
+type TaskFin struct {
+	taskId string
+}
+type TaskFinReply struct {
+	ok bool
+}
+
 // master to worker
 type assignTask struct {
-	task string
+	taskId string
+	taskType string
 	path string
 }
 
