@@ -4,4 +4,6 @@
 4. master等map任务列表全部完成后分配reduce任务
 5. 等待worker完成所有的reduce任务
 
-> master维持worker机器信息，存储任务的类型、状态
+> master维持worker机器信息，存储每一个Map和Reduce任务的状态。
+
+> Map任务完成时，Master接受到位置和大小的更新信息，然后把信息逐步递增地推送给正在工作的Reduce任务。
